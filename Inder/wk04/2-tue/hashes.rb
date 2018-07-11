@@ -67,6 +67,8 @@ users = {
   },
 }
 
+# users['Erik'][:favorite_numbers].class 
+# users['Erik'][:favorite_numbers] << 7
 
 #1. How would you access Jonathan's Twitter handle (i.e. the string `"tronathan"`)?
 p users["Jonathan"][:twitter]
@@ -82,7 +84,25 @@ p users["Erik"][:favorite_numbers]
 p users["Erik"][:favorite_numbers].min
 #1. How would you return an array of Anil's favorite numbers that are also even?
 p users["Anil"][:favorite_numbers].select {|n| n%2 ==0}
+
+even_numbers = users['Anil'][:favorite_numbers].select do |number|
+  number.even?
+end
+
+arr=[]
+arr = users['Anil'][:favorite_numbers].each do |number|
+  if number.even?
+    arr << number
+  end
+end
+
+#checkout arr
+
+
 #1. How would you return an array of the favorite numbers common to all users?
+
+
+
 favnum = users.values.map {|props| props[:favorite_numbers]}
 p favnum
 p favnum[0] & favnum[1] & favnum[2]
@@ -94,6 +114,10 @@ p favnum[0] & favnum[1] & favnum[2]
  #p y
 #end
 #p favnum   
+
+result_arr = users.values.map do | hash |
+  hash[:favorite_numbers]
+end.flatten.sort.uniq
 
 #1. How would you return an array containing all users' favorite numbers, sorted, and excluding duplicates?
 favnum = users.values.map {|props| props[:favorite_numbers]}
