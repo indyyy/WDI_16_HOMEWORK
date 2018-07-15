@@ -29,7 +29,7 @@ end
 
 def adopt()
   puts "client wants to adopt"
-  print "What's your name"
+  print "What's your name: "
   prospect = gets.chomp
   #$shelter[:clients].each do | item | 
   #  puts item.age if (item.name == prospect)
@@ -38,7 +38,7 @@ def adopt()
   c = $shelter[:clients].index { |item| item.name==prospect}
   puts c
   if c == nil
-     puts "I see you are new here, let's add you in"
+     puts "I see you are new here, let's add you in... \n\n"
      createClient()
      c = -1
   else 
@@ -62,7 +62,38 @@ end
 
 def give()
   puts "client wants to give for adoption"
-end
+  print "What's your name: "
+  prospect = gets.chomp
+  #$shelter[:clients].each do | item | 
+  #  puts item.age if (item.name == prospect)
+  
+  #IS CLIENT? Y:START GIVE ADOPTION N:NEW CLIENT PROCESS THEN GIVE
+  c = $shelter[:clients].index { |item| item.name==prospect}
+  puts c
+  # c REFERS TO  THE CLIENT INDEX IN THE SHELTER
+  if c == nil
+     puts "I see you are new here, let's add you in"
+     createClient()
+     # AS CLIENT IS NEW -1 is the last entry in the client shelter
+     c = -1
+  else 
+     puts "Welcome back #{prospect}" 
+  end
+  #GIVE ANIMAL TO SHELTER
+  print "Just have to ask you a few questions on the pet you are giving to the shelter \n\n "
+  createAnimal()
+  puts $shelter
+  # START THE PET TRANSFER PROCESS
+  # FIND THE ANIMAL IN SHELTER BY NAME
+  # -1 refers to the last animal in animal shelter
+  a = -1
+  
+  # REMOVE THE ANIMAL FROM OWNER BY UPDATING PETS to ZERO (have to update logic)
+  $shelter[:clients][c].pets = 0
+  puts $shelter
+
+  #end
+end 
 
 
 
