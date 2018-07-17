@@ -1,0 +1,10 @@
+<h1> This is the MovieLIST ERB FILE </h1>
+
+<% @resultlist.each do |result| %>
+<p> 
+
+<a href="/movie/<%= result['Title'] %>">
+<h2> <%= result['Title'] %> </h2>
+  <p></p>
+</p>
+<% end %>
