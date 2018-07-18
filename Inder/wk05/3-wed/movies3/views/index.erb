@@ -1,0 +1,10 @@
+<h1>hello world welcome to the movies Index ERB</h1>
+
+
+<h1>MOVIE LOOKUP</h1>
+  <form action="/movielist" method = "get">
+    <input type="text" name="movieinput" value = "">
+    <button>Find Movie</button>
+  </form>
+  <h1><%=params[:movieinput]%></h1>
+  
