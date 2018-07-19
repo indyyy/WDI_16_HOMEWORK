@@ -1,0 +1,14 @@
+<h1><%= @beaches['name'] %> </h1>
+<h2><%= @beaches['location'] %> </h2>
+>
+<img src="<%= @beaches['image_url'] %>" alt="">
+
+<form action="/beaches/<%= @beaches['id'] %>" method ="post">
+<input type ="hidden" name ="_method" value="delete">
+  <button>delete</button>
+  </form>
+
+  <a href="/beaches/<%= @beaches['id'] %>/edit">edit</a>
+  <form action="/beaches/<%=@beaches['id'] %>" method="post">
+  <input type ="hidden" name="beaches_id" value="<%= @beaches['id'] %>">
+    

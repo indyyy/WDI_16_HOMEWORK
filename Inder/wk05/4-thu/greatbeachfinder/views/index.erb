@@ -1,0 +1,9 @@
+<h1>greatbeachfinder</h1>
+
+<h4><a href="/beaches/new"> POST NEW BEACH</a></h4>
+<% @beaches.each do |beach| %>
+<p>
+  <a href= "/beaches/<%= beach.id %>">
+  <p><%= beach.name %></p>
+</p>
+<% end %>

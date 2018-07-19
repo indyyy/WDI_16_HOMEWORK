@@ -1,0 +1,17 @@
+<h1> edit Beaches </h1>
+
+<form action = "/beaches/<%= @beaches['id'] %>" method = "post">
+<input type = "hidden" name="_method" value="put">
+
+  <label for=""> name</label>
+  <input type = "text" name="name" value="<%= @beaches['name'] %>">
+
+  <label for=""> location</label>
+  <input type = "text" name="location" value="<%= @beaches['location']%>">
+
+  <label for ="">image url</label>
+  <input type = "text" name="image_url" value = "<%= @beaches['image_url'] %>">
+
+
+  <button>post</button>
+  </form>
