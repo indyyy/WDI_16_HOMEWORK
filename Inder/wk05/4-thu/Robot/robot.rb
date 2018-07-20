@@ -26,7 +26,8 @@ attr_reader  :instruction_count
 
 
   def reset
-    increment_instruction
+    @name = generate_name
+    #increment_instruction
   end
 
   private
