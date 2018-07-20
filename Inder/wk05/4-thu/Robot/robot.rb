@@ -4,14 +4,13 @@ attr_reader  :instruction_count
 
   def initialize
     @name = generate_name
-    @instruction_count = 0
+    @instruction_count = 5
     @created_at = Time.now
   end
 
-
   def generate_name
-    "#{prefix}#{suffix}"
     @instruction_count = 0
+    "#{prefix}#{suffix}"
   end
   
   def timers
@@ -34,39 +33,40 @@ attr_reader  :instruction_count
 
   def seconds_since_creation
     (Time.now - @created_at)
+  end
 
   def increment_instruction
     @instruction_count +=1
   end
 
   def prefix
-    ('AA'..'ZZ').to_a.sample
+    return ('AA'..'ZZ').to_a.sample
   end
 
   def suffix
-    ('000'...'999').to_a.sample)
+    return ('000'...'999').to_a.sample
   end
 
 end
 
 require 'pry'
-binding.pry
 
 
 
-r1 = Robot.new
-r1.name
 
-r1.reset
+#r1 = Robot.new
 
-r1.send(:name)
-r1.send(:reset)
+#r1.name
 
-r2=Robot.new
-r2.name
+#r1.reset
 
-('a..z').to_a_sample
-('a..z').to_a_sample(2
-  )
+#r1.send(:name)
+#r1.send(:reset)
+
+#r2=Robot.new
+#r2.name
+
+#('a..z').to_a_sample
+#('a..z').to_a_sample(2)
 
 
