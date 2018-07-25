@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+.navigation {
+  background: black;
+  color: whitesmoke;
+  display: flex;
+}
+
+ul {
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+}
+
+.navigation > ul > li {
+    padding: 0px 10px;
+    color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: hotpink;
+  text-decoration: none;
+}
+
+.top {
+  background: red;
+}
+
+.middle { 
+  background: blue;
+}
+
+.bottom {
+  background: yellow;
+}
+
+ 
+body {
+  background: burlywood;
+}
