@@ -16,7 +16,7 @@ CREATE TABLE users (
    mobile_num VARCHAR(100)
  );
 
- CREATE TABLE adpost (
+ CREATE TABLE adposts (
   id SERIAL4 PRIMARY KEY,
   user_id INTEGER,
   name VARCHAR(100),
