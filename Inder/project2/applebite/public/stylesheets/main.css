@@ -2,10 +2,36 @@
   box-sizing: border-box;
 }
 
+
+label {
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  background: black;
+  color: white; 
+  margin: 0px;
+}
+
+#subhead {
+  text-align: center;
+  color: pink;
+}
+
+#logoutbutton {
+  float: right; 
+}
+
+#logo {
+  float:left; 
+  background: none;
+}
 .navigation {
   background: black;
   color: whitesmoke;
   display: flex;
+  padding-left: 40px;
 }
 
 ul {
@@ -22,11 +48,13 @@ ul {
 a {
   color: white;
   text-decoration: none;
+  font-size: 10px; 
 }
 
 a:active {
   color: white;
-  text-decoration: none;
+  text-decoration: none; 
+  font-size: 10px;
 }
 
 a:hover {
@@ -35,18 +63,35 @@ a:hover {
 }
 
 .top {
-  background: red;
+  background: black;
+  color: pink;
+}
+.top ul li {
+  width: 200px; 
+  background: black; 
+  display: flex;
+  text-align: center;
 }
 
 .middle { 
-  background: blue;
+  background: pink;
+  border: none;
 }
 
 .bottom {
-  background: yellow;
+  background: black;
 }
 
  
 body {
-  background: burlywood;
+  background: black;
+  font: white; 
 }
+
+input[type=search] {
+  background-color: pink;
+  border: none; 
+  color:black;
+  height: 40px; 
+}
+
