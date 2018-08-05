@@ -1,0 +1,13 @@
+
+@media (min-width: 40em) 
+{
+  .displaygiphy {
+    width: 24%;
+    float:left;
+    margin-right: 1%;
+  }
+
+  .displaygiphy:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+}
