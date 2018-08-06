@@ -2,3 +2,10 @@
 background:  mistyrose;
 width: 200px; 
 }
+
+.square {
+  width: 20px;
+  height: 20px;
+  background: green;
+  display: inline-flex;
+}
