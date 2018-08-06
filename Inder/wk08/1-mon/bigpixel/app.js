@@ -10,3 +10,12 @@ $( "#selectcolor" ).click(function() {
 for (i = 0; i < 1000; i++) {
   $( "body" ).append( "<div class='square'></div>" );
 }
+
+
+$('.square').on('click', function(){
+  var brushColor = $('.brush').css("background-color");
+  console.log(brushColor)
+  $(this).css("background-color", brushColor);
+});
+
+
