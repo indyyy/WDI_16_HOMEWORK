@@ -7,16 +7,31 @@
   <title>Document</title>
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
-<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="reset">
 <link rel="stylesheet" href="style.css">
 <body>
-  <h1> Select a Color</h1>
+    
+  <h1> Enter a Color Name</h1>
   <form>
-    <input type="text" id="inputcolor" placeholder="mistyrose" >
+    <input type="text" id="inputcolor" placeholder="Enter a color name..." size="50" >
     <input type="submit" id="selectcolor" value="Click Me">
+    <button id="resetColor">Reset Color</button>
     <div class="brush">CURRENT BRUSH COLOR </div>
   </form>
-  
+
+  <h1>or Pick from Color Palette</h1>
+  <form>
+      <input type="color" id="favcolor">
+  </form>
+
+  <h1> Select a Movie</h1>
+  <form>
+    <input type = "text" name="moviename1" id="inputmovie" placeholder="Enter a movie name..."   size="50">
+    <input type = "submit" id="selectmovie" value="Click Me">
+    <button id="resetMovie">Reset Movie</button>
+  </form>
+  <div class ="pixelwrapper"></div>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
