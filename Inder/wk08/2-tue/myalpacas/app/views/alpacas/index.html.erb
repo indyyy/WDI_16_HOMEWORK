@@ -1,0 +1,15 @@
+<form action="/alpacas" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type ="text" name="url" value="<%= @alpaca.url %>">
+  <button>create</button>
+</form>
+
+
+
+
+<% @alpacas.each do |alpaca| %>
+
+<p><a href="/alpacas/<%= alpaca.id%>"><%= alpaca.url %></a></p>
+<p><img src="<%=alpaca.url%>"></p>
+
+<% end %>
