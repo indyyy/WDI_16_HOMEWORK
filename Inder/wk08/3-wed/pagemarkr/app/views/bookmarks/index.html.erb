@@ -1,0 +1,33 @@
+<nav>
+  <ul>
+    <li><a href="/recent">recent</a></li>
+    <li><a href="/neglected">neglected</a></li>
+    <li><a href="/archived">archived</a></li>
+    <li><a href="/bookmarks">all</a></li>
+  </ul>
+</nav>
+
+
+<% @bookmarks.each do |bookmark| %>
+
+<p>
+
+<form action="/archive/<%= bookmark.id%>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<input type="hidden" name="_method" value="put">
+  <button>archive</button>
+</form>
+<a href="/bookmarks/<%= bookmark.id%>"><%#= bookmark.url %>
+
+<!--<a target="_blank" href="/track?id=<%= bookmark.id %>&url=<%=bookmark.url %>">-->
+
+<%= bookmark.title %> 
+</a>
+<span><%= bookmark.click_count %></span>
+</p>
+<% end %>
+
+
+
+
+
